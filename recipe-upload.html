@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Recipe - DishDiary</title>
+   <!-- favicon -->
+   <link rel="shortcut icon" href="./assets/recipe.ico" type="image/x-icon" />
+   <!-- normalize -->
+   <link rel="stylesheet" href="./css/normalize.css" />
+   <link rel="stylesheet" href="./css/main.css"> <!-- main CSS -->
+</head>
+<body>
+    <!-- nav  -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-header">
+          <a href="index.html" class="nav-logo">
+            <img src="./assets/weblogo.PNG" alt="DishDiary" />
+          </a>
+          <button class="nav-btn btn">
+            <i class="fas fa-align-justify"></i>
+          </button>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link"> home </a>
+          <a href="about.html" class="nav-link"> about </a>
+          <a href="tags.html" class="nav-link"> tags </a>
+          <a href="recipes.html" class="nav-link"> recipes </a>
+          <a href="recipe-upload.html" class="nav-link"> upload </a>
+          <div class="nav-link contact-link">
+            <a href="login.html" class="nav-link"> login/register </a>
+            <a href="contact.html" class="btn"> contact </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- end of nav -->
+    <!-- main -->
+    <main class="page">
+      <!-- header -->
+      <header class="hero">
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1>DISHDIARY</h1>
+            <h4>Inspiring Cooks, One Dish at a Time.</h4>
+          </div>
+        </div>
+      </header>
+      <!-- end of header -->
+  <div class="upload-page">
+    <div class="upload-container">
+      <h2>Upload Your Recipe</h2>
+      <form id="recipe-form" action="php/upload-recipe.php" method="POST" enctype="multipart/form-data">
+        <div class="input-group">
+          <label for="title">Recipe Title</label>
+          <input type="text" name="title" id="title" placeholder="Enter recipe title" required>
+        </div>
+        <div class="input-group">
+          <label for="description">Description</label>
+          <textarea name="description" id="description" rows="4" placeholder="Enter a brief description" required></textarea>
+        </div>
+        <div class="input-group">
+          <label for="ingredients">Ingredients</label>
+          <textarea name="ingredients" id="ingredients" rows="4" placeholder="List the ingredients" required></textarea>
+        </div>
+        <div class="input-group">
+          <label for="steps">Steps</label>
+          <textarea name="steps" id="steps" rows="6" placeholder="Write the steps" required></textarea>
+        </div>
+        <div class="input-group">
+          <label for="image">Upload Image</label>
+          <input type="file" name="image" id="image" accept="image/*">
+        </div>
+        <button type="submit" class="btn">Upload Recipe</button>
+      </form>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="page-footer">
+    <p>
+      &copy; <span id="date"></span>
+      <span class="footer-logo">DishDiary</span> Built by Dushan M Nawasinghe
+ 
+    </p>
+  </footer>
+</body>
+</html>
